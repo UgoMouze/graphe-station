@@ -1,4 +1,17 @@
 <LaPutiniere> a <WeatherStation>;
     <LocData> <PurLoc>;
     <InsData> <PurIns>.
-#test to commit
+
+
+<PurLoc> <Nom_Département> "Loire"^^xsd:string;
+    <Num_Département>"42"^^xsd:integer;
+    <Emplacement> <La_Purinière>,<Grand_Clos>.
+
+    <La_Purinière><Latitude> "45°26'07'' Nord";
+    <Longitude> "4°22'05''' Est".
+
+    <Grand_Clos><Latitude> "45°26'52''' Nord";
+    <Longitude> "4°22'05''' Est".
+
+    
+
