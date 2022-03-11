@@ -1,0 +1,3 @@
+<LaPutiniere> a <WeatherStation>;
+    <LocData> <PurLoc>;
+    <InsData> <PurIns>.
