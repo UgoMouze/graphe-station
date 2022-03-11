@@ -1,3 +1,4 @@
 <LaPutiniere> a <WeatherStation>;
     <LocData> <PurLoc>;
     <InsData> <PurIns>.
+#test to commit
