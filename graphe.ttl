@@ -33,11 +33,113 @@
     <Modele> "Abri miniature pour mesure thermométrique et hygrométrique (Radome) (SOCRIMA)"^^xds:string.
 
 <DeploimentAbriPur1> a <Deploiment>;
-    <Debut> "2002-06-27"^^xds:date.
+    <Debut> "2002-06-27"^^xsd:date.
 
 
 <StationAutoPur1> a <StationAuto>;
     <Deploiment> <DeploimentStationAutoPur1>;
     <Modele> "MERCURY"^^xds:string;
+    <Position> <PositionStationAutoPur1>.
 
-<DeploimentStationAutoPur1> a <Deploiment>
+<DeploimentStationAutoPur1> a <Deploiment>;
+    <Debut> "2020-09-29"^^xsd:date.
+
+<PositionStationAutoPur1> a <Position>;
+    <Alti> "640"^^xsd:mesure.
+
+
+<StationAutoPur2> a <StationAuto>;
+    <Deploiment> <DeploimentStationAutoPur2>;
+    <Modele> "XARIA"^^xsd:string.
+
+<DeploimentStationAutoPur2> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date;
+    <Fin> "2020-09-29"^^xsd:date.
+
+
+<AnemometrePur1> a <Anemometre>;
+    <Deploiment> <DeploimentAnemometrePur1>;
+    <Modele> "DEOLIA 96"^^xsd:string;
+    <Position> <PositionAnemometrePur1>.
+
+<DeploimentAnemometrePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionAnemometrePur1> a <Position>;
+    <H.capteur> "10.0"^^xsd:mesure.
+
+
+<GirouettePur1> a <Girouette>;
+    <Deploiment> <DeploimentGirouettePur1>;
+    <Modele> "DEOLIA 96"^^xsd:string;
+    <Position> <PositionGirouettePur1>.
+
+<DeploimentGirouettePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionGirouettePur1> a <Position>;
+    <H.capteur> "10.0"^^xsd:mesure.
+
+
+<PyloneAnemometriquePur1> a <PyloneAnemometrique>;
+    <Deploiment> <DeploimentPyloneAnemometriquePur1>;
+    <Modele> "SERMETO GALAXY"^^xsd:string;
+    <Position> <PositionPyloneAnemometriquePur1>.
+
+<DeploimentPyloneAnemometriquePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionPyloneAnemometriquePur1> a <Position>;
+    <H.capteur> "10.0"^^xsd:mesure.
+
+
+<SondeThermometriquePur1> a <SondeThermometrique>;
+    <Deploiment> <DeploimentSondeThermometriquePur1>;
+    <Modele> "PT 100"^^xsd:string;
+    <Position> <PositionSondeThermometriquePur1>.
+
+<DeploimentSondeThermometriquePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionSondeThermometriquePur1> a <Position>;
+    <H.capteur> "1.70"^^xsd:mesure.
+
+
+<PluviometrePur1> a <Pluviometre>;
+    <Deploiment> <DeploimentPluviometrePur1>;
+    <Modele> "DEGERANE"^^xsd:string;
+    <Position> <PositionPluviometrePur1>.
+
+<DeploimentPluviometrePur1> a <Deploiment>;
+    <Debut> "2002-07-29"^^xsd:date;
+    <Fin> "2006-08-22"^^xsd:date.
+
+<PositionPluviometrePur1> a <Position>;
+    <H.capteur> "1.00"^^xsd:mesure.
+
+
+<PluviometrePur2> a <Pluviometre>;
+    <Deploiment> <DeploimentPluviometrePur2>;
+    <Modele> "PRECIS MECANIQUE 1000 CM2-3070"^^xsd:string;
+    <Position> <PositionPluviometrePur2>.
+
+<DeploimentPluviometrePur2> a <Deploiment>;
+    <Debut> "2011-08-23"^^xsd:date.
+
+<PositionPluviometrePur2> a <Position>;
+    <H.capteur> "1.00"^^xsd:mesure;
+    <Alti> "602"^^xsd:mesure;
+    <Lat_100> "452686"^^xsd:mesure;
+<Lon_100> "42185"^^xsd:mesure.
+
+
+<SondeHygrometriquePur1> a <SondeHygrometrique>;
+    <Deploiment> <DeploimentSondeHygrometriquePur1>;
+    <Modele> "HMP45D 0/1V"^^xsd:string;
+    <Position> <PositionSondeHygrometriquePur1>.
+
+<DeploimentSondeHygrometriquePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionSondeHygrometriquePur1> a <Position>;
+    <H.capteur> "1.70"^^xsd:mesure.
