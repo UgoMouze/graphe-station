@@ -33,4 +33,96 @@
     <Modele> "Abri miniature pour mesure thermométrique et hygrométrique (Radome) (SOCRIMA)"^^xds:string.
 
 <DeploimentAbriPur1> a <Deploiment>;
-    <Debut> "2002-06-27"^^xds:date.
+    <Debut> "2002-06-27"^^xsd:date.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<StationAutoPur2> a <StationAuto>;
+    <Deploiment> <DeploimentStationAutoPur2>;
+    <Modele> "XARIA"^^xsd:string.
+
+<DeploimentStationAutoPur2> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date;
+    <Fin> "2020-09-29"^^xsd:date.
+
+
+<AnemometrePur1> a <Anemometre>;
+    <Deploiment> <DeploimentAnemometrePur1>;
+    <Modele> "DEOLIA 96"^^xsd:string;
+    <Position> <PositionAnemometrePur1>.
+
+<DeploimentAnemometrePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionAnemometrePur1> a <Position>;
+    <H.capteur> "10.0"^^xsd:mesure.
+
+
+<GirouettePur1> a <Girouette>;
+    <Deploiment> <DeploimentGirouettePur1>;
+    <Modele> "DEOLIA 96"^^xsd:string;
+    <Position> <PositionGirouettePur1>.
+
+<DeploimentGirouettePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionGirouettePur1> a <Position>;
+    <H.capteur> "10.0"^^xsd:mesure.
+
+
+<PyloneAnemometriquePur1> a <PyloneAnemometrique>;
+    <Deploiment> <DeploimentPyloneAnemometriquePur1>;
+    <Modele> "SERMETO GALAXY"^^xsd:string;
+    <Position> <PositionPyloneAnemometriquePur1>.
+
+<DeploimentPyloneAnemometriquePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionPyloneAnemometriquePur1> a <Position>;
+    <H.capteur> "10.0"^^xsd:mesure.
+
+
+<PyloneAnemometriquePur1> a <PyloneAnemometrique>;
+    <Deploiment> <DeploimentPyloneAnemometriquePur1>;
+    <Modele> "SERMETO GALAXY"^^xsd:string;
+    <Position> <PositionPyloneAnemometriquePur1>.
+
+<DeploimentPyloneAnemometriquePur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xsd:date.
+
+<PositionPyloneAnemometriquePur1> a <Position>;
+    <H.capteur> "10.0"^^xsd:mesure.
