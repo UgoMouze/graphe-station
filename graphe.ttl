@@ -3,13 +3,34 @@
     <InsData> <PurIns>.
 
 
-<PurLoc> <Nom_Département> "Loire"^^xsd:string;
-    <Num_Département>"42"^^xsd:integer;
-    <Emplacement> <La_Purinière>,<Grand_Clos>.
+<PurLoc> a <LocData>;
+    <NomDépartement> "Loire"^^xsd:string;
+    <NumDépartement>"42"^^xsd:integer;
+    <Emplacement> <EmplLaPurinière>,<EmplGrandClos>.
 
-    <La_Purinière><Latitude> "45°26'07'' Nord";
+<EmplLaPurinière> a <Emplacement>;
+    <Latitude> "45°26'07'' Nord";
     <Longitude> "4°22'05''' Est".
 
-    <Grand_Clos><Latitude> "45°26'52''' Nord";
+<GrandClos> a <Emplacement>;
+    <Latitude> "45°26'52''' Nord";
     <Longitude> "4°22'05''' Est".
 
+<PurIns> a <InsData>;
+    <Instrument> <Abrimeteo>, <StationAuto>, <Anemometre>, <Girouette>, <PyloneAnemometrique>, <SondeThermometrique>, <Pluviometre>, <SondeHygrometrique>;
+    <Abrimeteo> <AbriPur1>;
+    <StationAuto> <StationAutoPur1>, <StationAutoPur2>;
+    <Anemometre> <AnemometrePur1>;
+    <Girouette> <GirouettePur1>;
+    <PyloneAnemometrique> <PyloneAnemometriquePur1>;
+    <SondeThermometrique> <SondeThermometriquePur1>;
+    <Pluviometre> <PluviometrePur1>, <PluviometrePur2>;
+    <SondeHygrometrique> <SondeHygrometriquePur1>.
+
+
+<AbriPur1> a <Abrimeteo>;
+    <Deploiment> <DeploimentAbriPur1>;
+    <Modele> "Abri miniature pour mesure thermométrique et hygrométrique (Radome) (SOCRIMA)"^^xds:string.
+
+<DeploimentAbriPur1> a <Deploiment>;
+    <Debut> "2002-06-27"^^xds:date.
