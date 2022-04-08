@@ -1,4 +1,4 @@
-<LaPutiniere> a <WeatherStation>;
+<LaPuriniere> a <WeatherStation>;
     <LocData> <PurLoc>;
     <InsData> <PurIns>.
 
