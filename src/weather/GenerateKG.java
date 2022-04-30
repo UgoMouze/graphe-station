@@ -93,22 +93,5 @@ public class GenerateKG {
         kg.write(os,"Turtle");
     }
 
-    /**
-     * Main execution method
-     */
-    public static void main(String[] args) {
-        // Create a new KG generator
-        GenerateKG gen = new GenerateKG();
-        // Set the base URI to a custom value
-        gen.setBase("http://mydomain.org/weatherkg/");
-        // Define an additional prefix for the ontology namespace
-        gen.setNsPrefix("onto", "http://mydomain.org/ontology/");
-        // Add a single triple
-        gen.addTriples("<> a onto:Entity .");
-        // Add a bunch of triples at once
-        gen.addTriples("<> rdfs:label \"Test entity\"@en;"
-                + "  rdfs:commnt \"This is a test\"@en .");
-        gen.serialise();
 
-    }
 }
