@@ -181,7 +181,6 @@ public class GenerateKGWeather {
                             "onto:Visibilite <Visibilite" + jour + Mois[mois] + annee + ville + "> ; "+
                             "onto:Inondation <Inondation" + jour + Mois[mois] + annee + ville + "> ; "+
                             "onto:Neige <Neige" + jour + Mois[mois] + annee + ville + "> ; "+
-                            "onto:Verglas <Verglas" + jour + Mois[mois] + annee + ville + "> ; "+
                             "onto:Vents_Violents <Vents_Violents" + jour + Mois[mois] + annee + ville + "> ; "+
                             "onto:Blizzard <Blizzard" + jour + Mois[mois] + annee + ville + "> ; "+
                             "onto:Canicule <Canicule" + jour + Mois[mois] + annee + ville + "> . "
