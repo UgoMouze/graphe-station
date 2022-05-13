@@ -4,6 +4,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
+<http://mydomain.org/weatherkg/Alert2Avril2021Saint-Etienne>
+        a                    onto:Alert ;
+        onto:Blizzard        <http://mydomain.org/weatherkg/Blizzard2Avril2021Saint-Etienne> ;
+        onto:Canicule        <http://mydomain.org/weatherkg/Canicule2Avril2021Saint-Etienne> ;
+        onto:Inondation      <http://mydomain.org/weatherkg/Inondation2Avril2021Saint-Etienne> ;
+        onto:Neige           <http://mydomain.org/weatherkg/Neige2Avril2021Saint-Etienne> ;
+        onto:Vents_Violents  <http://mydomain.org/weatherkg/Vents_Violents2Avril2021Saint-Etienne> ;
+        onto:Verglas         <http://mydomain.org/weatherkg/Verglas2Avril2021Saint-Etienne> ;
+        onto:Visibilite      <http://mydomain.org/weatherkg/Visibilite2Avril2021Saint-Etienne> .
+
 <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire3h2Avril2021Saint-Etienne>
         a            onto:TemperatureMoyenneHoraire ;
         onto:valeur  "0.6111111" ;
@@ -49,6 +59,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire17h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports17h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne17h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire17h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire17h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -70,6 +81,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire4h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports4h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne4h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire4h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire4h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -82,6 +94,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire19h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports19h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne19h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire19h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire19h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -97,6 +110,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire6h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports6h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne6h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire6h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire6h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -108,6 +122,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire21h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports21h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne21h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire21h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire21h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -124,6 +139,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire11h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports11h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne11h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire11h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire11h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -140,6 +156,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire8h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports8h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne8h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire8h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire8h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -151,6 +168,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire23h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports23h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne23h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire23h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire23h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -158,6 +176,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire13h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports13h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne13h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire13h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire13h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -183,6 +202,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire15h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports15h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne15h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire15h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire15h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -195,6 +215,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire2h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports2h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne2h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire2h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -249,6 +270,10 @@
         onto:valeur  "15.922221" ;
         xsd:unit     "Celsius" .
 
+<http://mydomain.org/weatherkg/Verglas2Avril2021Saint-Etienne>
+        a           onto:Verglas ;
+        xsd:string  "Risque de verglas" .
+
 <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne>
         a            onto:TemperatureMoyenneHoraire ;
         onto:valeur  "1.3777777" ;
@@ -262,6 +287,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire9h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports9h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne9h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire9h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire9h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -301,6 +327,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire16h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports16h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne16h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire16h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire16h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -316,6 +343,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire3h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports3h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne3h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire3h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire3h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -323,6 +351,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire18h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports18h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne18h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire18h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire18h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -338,6 +367,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire5h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports5h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne5h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire5h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire5h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -354,6 +384,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire20h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports20h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne20h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire20h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire20h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -370,6 +401,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire10h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports10h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne10h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire10h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire10h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -381,6 +413,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire7h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports7h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne7h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire7h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire7h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -392,6 +425,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire22h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports22h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne22h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire22h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire22h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -404,6 +438,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire12h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports12h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne12h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire12h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire12h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -429,6 +464,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire14h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports14h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne14h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire14h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire14h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -441,6 +477,7 @@
 <http://mydomain.org/weatherkg/MesureHoraire1h2Avril2021Saint-Etienne>
         a                               onto:MesureHoraire ;
         onto:Hour                       <http://mydomain.org/weatherkg/Rapports1h2Avril2021> ;
+        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne1h2Avril2021Saint-Etienne> ;
         onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire1h2Avril2021Saint-Etienne> ;
         onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire1h2Avril2021Saint-Etienne> ;
         onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
@@ -484,6 +521,12 @@
         a            onto:TemperatureMoyenneHoraire ;
         onto:valeur  "14.77778" ;
         xsd:unit     "Celsius" .
+
+<http://mydomain.org/weatherkg/MesureQuotidienne0h2Avril2021Saint-Etienne>
+        a           onto:MesureQuotidienne ;
+        onto:Alert  <http://mydomain.org/weatherkg/Alert0h2Avril2021Saint-Etienne> ;
+        onto:Day    <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+        onto:Ville  <http://mydomain.org/weatherkg/Saint-Etienne> .
 
 <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire1h2Avril2021Saint-Etienne>
         a            onto:TemperatureMoyenneHoraire ;
