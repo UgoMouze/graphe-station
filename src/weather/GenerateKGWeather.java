@@ -209,12 +209,6 @@ public class GenerateKGWeather {
                                 "a onto:Neige ;" +
                                 "xsd:string \"Risque de neige\" . "
                 );
-            } else if (tempmin < 5) {
-                gen.addTriples(
-                        "<Verglas" + jour + Mois[mois] + annee + ville + "> " +
-                                "a onto:Verglas ;" +
-                                "xsd:string \"Risque de verglas\" . "
-                );
             }
 
             if (rafale > 100){

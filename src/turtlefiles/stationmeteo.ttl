@@ -270,10 +270,6 @@
         onto:valeur  "15.922221" ;
         xsd:unit     "Celsius" .
 
-<http://mydomain.org/weatherkg/Verglas2Avril2021Saint-Etienne>
-        a           onto:Verglas ;
-        xsd:string  "Risque de verglas" .
-
 <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne>
         a            onto:TemperatureMoyenneHoraire ;
         onto:valeur  "1.3777777" ;
