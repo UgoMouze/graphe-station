@@ -1,0 +1,48 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <a>
+
+# ↓↓↓ Write your code down 
+
+:Rapports2022 a :Year;
+    :date "2022"^^xsd:gYear.
+
+:RapportsMars2022 a :Month;
+	:Year :Rapports2022;
+    :date "2022-03"^^xsd:gYearMonth.
+
+:Rapports18Mars2022 a :Day;
+     	:Month :RapportsMars2022;
+        :date "2022-03-18"^^xsd:date.
+
+:Rapports10h18Mars2022 a :Hour;
+      	:Day :Rapports18Mars2022;
+        :date "2022-18-03T10:00:00+01:00"^^xsd:dateTime.
+
+:SaintEtienne a :Ville;
+    :departement :Loire.
+
+:LaPuriniere a :Station;
+	:Ville :SaintEtienne.
+
+:MesureHoraire10h18Mars2022LaPuriniere a :MesureHoraire;
+                :Hour :Rapports10h18Mars2022;
+                :Stations :LaPuriniere;
+                :TemperatureMoyenneHoraire :TemperatureMoyenneHoraire10h18Mars2022LaPuriniere;
+                :PrecipitationMoyenneHoraire :PrecipitationMoyenneHoraire10h18Mars2022LaPuriniere.
+
+:TemperatureMoyenneHoraire10h18Mars2022LaPuriniere a :TemperatureMoyenneHoraire;
+    :valeur "4.6";
+    #"4.6Cel"^^cdt:ucam;
+    :unit "Celsius".
+
+:PrecipitationMoyenneHoraire10h18Mars2022LaPuriniere a :PrecipitationMoyenneHoraire;
+    :valeur "2mm".
+
+:Mesure18Mars2022LaPuriniere a :MesureQuotidienne;
+                             :Day :Rapports18Mars2022;
+                             :Station :LaPuriniere;
+                             :Temperature "18";
+                             :PRecipitation "18mm".
+
+:MesureQuotidienne a :Mesure.
+:MesureHoraire a :Mesure.
