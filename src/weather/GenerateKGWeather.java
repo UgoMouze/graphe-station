@@ -212,4 +212,3 @@ public class GenerateKGWeather {
         }
     }
 }
-float test
