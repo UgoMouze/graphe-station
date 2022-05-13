@@ -1,545 +1,1063 @@
-@prefix ex:   <http://example.org/> .
+@prefix ex: <http://example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix onto: <http://mydomain.org/ontology/> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-
-<http://mydomain.org/weatherkg/Alert2Avril2021Saint-Etienne>
-        a                    onto:Alert ;
-        onto:Blizzard        <http://mydomain.org/weatherkg/Blizzard2Avril2021Saint-Etienne> ;
-        onto:Canicule        <http://mydomain.org/weatherkg/Canicule2Avril2021Saint-Etienne> ;
-        onto:Inondation      <http://mydomain.org/weatherkg/Inondation2Avril2021Saint-Etienne> ;
-        onto:Neige           <http://mydomain.org/weatherkg/Neige2Avril2021Saint-Etienne> ;
-        onto:Vents_Violents  <http://mydomain.org/weatherkg/Vents_Violents2Avril2021Saint-Etienne> ;
-        onto:Verglas         <http://mydomain.org/weatherkg/Verglas2Avril2021Saint-Etienne> ;
-        onto:Visibilite      <http://mydomain.org/weatherkg/Visibilite2Avril2021Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire3h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "0.6111111" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Saint-Etienne>
-        a                 onto:Ville ;
-        onto:Departement  42 .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire16h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "16.655556" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire5h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "-1.6556846E-9" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports12h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T12h" .
-
-<http://mydomain.org/weatherkg/Rapports21h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T21h" .
-
-<http://mydomain.org/weatherkg/Rapports16h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T16h" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire8h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire17h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire17h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports17h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne17h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire17h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire17h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/Rapports22h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T22h" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire19h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire10h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "10.944445" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/MesureHoraire4h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports4h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne4h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire4h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire4h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/Rapports4h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T4h" .
-
-<http://mydomain.org/weatherkg/MesureHoraire19h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports19h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne19h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire19h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire19h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire21h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "1.0mm" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire2h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire6h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports6h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne6h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire6h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire6h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire11h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire21h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports21h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne21h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire21h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire21h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire23h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "1.5mm" .
-
-<http://mydomain.org/weatherkg/Rapports5h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T5h" .
-
-<http://mydomain.org/weatherkg/MesureHoraire11h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports11h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne11h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire11h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire11h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire4h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/Rapports9h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T9h" .
-
-<http://mydomain.org/weatherkg/MesureHoraire8h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports8h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne8h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire8h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire8h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire13h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire23h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports23h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne23h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire23h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire23h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/MesureHoraire13h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports13h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne13h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire13h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire13h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire6h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire15h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire17h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "16.244446" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire6h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "-0.6" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/MesureHoraire15h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports15h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne15h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire15h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire15h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire19h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "14.866667" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/MesureHoraire2h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports2h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne2h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire2h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire8h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "4.5444446" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports13h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T13h" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire21h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "10.133333" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports17h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T17h" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire11h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "12.7" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire23h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "8.5" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports23h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T23h" .
-
-<http://mydomain.org/weatherkg/Rapports1h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T1h" .
-
-<http://mydomain.org/weatherkg/Rapports18h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T18h" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire13h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "15.922221" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "1.3777777" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire15h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "16.777779" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/MesureHoraire9h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports9h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne9h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire9h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire9h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/Rapports2h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T2h" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire4h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "0.12222222" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports6h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T6h" .
-
-<http://mydomain.org/weatherkg/Rapports2021>
-        a          onto:Year ;
-        xsd:gYear  "2021" .
-
-<http://mydomain.org/weatherkg/Rapports2Avril2021>
-        a           onto:Day ;
-        onto:Month  <http://mydomain.org/weatherkg/RapportsAvril2021> ;
-        xsd:date    "2021-04-2" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire7h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire16h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire16h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports16h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne16h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire16h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire16h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire9h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire18h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire3h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports3h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne3h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire3h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire3h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/MesureHoraire18h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports18h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne18h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire18h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire18h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire20h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire1h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire5h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports5h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne5h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire5h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire5h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/Rapports10h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T10h" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire10h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire20h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports20h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne20h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire20h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire20h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire22h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "3.2000003mm" .
-
-<http://mydomain.org/weatherkg/Rapports14h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T14h" .
-
-<http://mydomain.org/weatherkg/MesureHoraire10h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports10h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne10h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire10h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire10h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire3h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire7h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports7h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne7h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire7h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire7h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire12h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/MesureHoraire22h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports22h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne22h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire22h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire22h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/Rapports20h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T20h" .
-
-<http://mydomain.org/weatherkg/MesureHoraire12h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports12h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne12h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire12h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire12h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/Rapports15h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T15h" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire5h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/PrecipitationHoraire14h2Avril2021Saint-Etienne>
-        a            onto:PrecipitationHoraire ;
-        onto:valeur  "0.0mm" .
-
-<http://mydomain.org/weatherkg/Rapports19h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T19h" .
-
-<http://mydomain.org/weatherkg/MesureHoraire14h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports14h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne14h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire14h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire14h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire18h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "16.077778" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/MesureHoraire1h2Avril2021Saint-Etienne>
-        a                               onto:MesureHoraire ;
-        onto:Hour                       <http://mydomain.org/weatherkg/Rapports1h2Avril2021> ;
-        onto:MesureQuotidienne          <http://mydomain.org/weatherkg/MesureQuotidienne1h2Avril2021Saint-Etienne> ;
-        onto:PrecipitationHoraire       <http://mydomain.org/weatherkg/PrecipitationHoraire1h2Avril2021Saint-Etienne> ;
-        onto:TemperatureMoyenneHoraire  <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire1h2Avril2021Saint-Etienne> ;
-        onto:Ville                      <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/Rapports3h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T3h" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire7h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "-0.28888887" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports7h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T7h" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire20h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "11.8111105" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire9h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "8.377777" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire22h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "8.9777775" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports8h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T8h" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire12h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "14.77778" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/MesureQuotidienne0h2Avril2021Saint-Etienne>
-        a           onto:MesureQuotidienne ;
-        onto:Alert  <http://mydomain.org/weatherkg/Alert0h2Avril2021Saint-Etienne> ;
-        onto:Day    <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        onto:Ville  <http://mydomain.org/weatherkg/Saint-Etienne> .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire1h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "2.3222222" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/RapportsAvril2021>
-        a               onto:Month ;
-        onto:Year       <http://mydomain.org/weatherkg/Rapports2021> ;
-        xsd:gYearMonth  "2021-04" .
-
-<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire14h2Avril2021Saint-Etienne>
-        a            onto:TemperatureMoyenneHoraire ;
-        onto:valeur  "16.999998" ;
-        xsd:unit     "Celsius" .
-
-<http://mydomain.org/weatherkg/Rapports11h2Avril2021>
-        a             onto:Hour ;
-        onto:Day      <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-        xsd:datetime  "2021-04-2T11h" .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://mydomain.org/ontology/Alert
+onto:Alert rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Blizzard
+onto:Blizzard rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Canicule
+onto:Canicule rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Day
+onto:Day rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Departement
+onto:Departement rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Hour
+onto:Hour rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Inondation
+onto:Inondation rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/MesureQuotidienne
+onto:MesureQuotidienne rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Month
+onto:Month rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Neige
+onto:Neige rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/PrecipitationHoraire
+onto:PrecipitationHoraire rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/TemperatureMoyenneHoraire
+onto:TemperatureMoyenneHoraire rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Vents_Violents
+onto:Vents_Violents rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Verglas
+onto:Verglas rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Ville
+onto:Ville rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Visibilite
+onto:Visibilite rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/Year
+onto:Year rdf:type owl:AnnotationProperty .
+
+
+###  http://mydomain.org/ontology/valeur
+onto:valeur rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2001/XMLSchema#datetime
+xsd:datetime rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYearMonth
+xsd:gYearMonth rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2001/XMLSchema#unit
+xsd:unit rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#IsMonthOf
+<http://www.co-ode.org/ontologies/ont.owl#IsMonthOf> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isDateOf> ;
+                                                     owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#hasMonth> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#IsYearOf
+<http://www.co-ode.org/ontologies/ont.owl#IsYearOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isDateOf> ;
+                                                    owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#hasYear> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasAlert
+<http://www.co-ode.org/ontologies/ont.owl#hasAlert> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                    owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isAlertOf> ;
+                                                    rdfs:domain onto:MesureQuotidienne ;
+                                                    rdfs:range onto:Alert .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasDate
+<http://www.co-ode.org/ontologies/ont.owl#hasDate> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isDateOf> ;
+                                                   rdfs:domain onto:MesureQuotidienne ;
+                                                   rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Date> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasDay
+<http://www.co-ode.org/ontologies/ont.owl#hasDay> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasDate> ;
+                                                  owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isDayOf> ;
+                                                  rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Date> ;
+                                                  rdfs:range onto:Day .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasHour
+<http://www.co-ode.org/ontologies/ont.owl#hasHour> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasDate> ;
+                                                   owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isHourOf> ;
+                                                   rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Date> ;
+                                                   rdfs:range onto:Hour .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasMeasurements
+<http://www.co-ode.org/ontologies/ont.owl#hasMeasurements> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                                           owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isMeasurementOf> ;
+                                                           rdfs:domain onto:MesureQuotidienne ;
+                                                           rdfs:range onto:MesureHoraire .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasMonth
+<http://www.co-ode.org/ontologies/ont.owl#hasMonth> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasDate> ;
+                                                    rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Date> ;
+                                                    rdfs:range onto:Month .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasPlace
+<http://www.co-ode.org/ontologies/ont.owl#hasPlace> rdf:type owl:ObjectProperty ;
+                                                    owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isPlaceOf> ;
+                                                    rdfs:domain onto:MesureQuotidienne ;
+                                                    rdfs:range onto:Ville .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasPrecipitation
+<http://www.co-ode.org/ontologies/ont.owl#hasPrecipitation> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasMeasurements> ;
+                                                            owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isPrecipitationOf> ;
+                                                            rdfs:domain onto:MesureHoraire ;
+                                                            rdfs:range onto:PrecipitationHoraire .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasTemperature
+<http://www.co-ode.org/ontologies/ont.owl#hasTemperature> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasMeasurements> ;
+                                                          owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isTemperatureOf> ;
+                                                          rdfs:domain onto:MesureHoraire ;
+                                                          rdfs:range onto:TemperatureMoyenneHoraire .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasYear
+<http://www.co-ode.org/ontologies/ont.owl#hasYear> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasDate> ;
+                                                   rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Date> ;
+                                                   rdfs:range onto:Year .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isAlertOf
+<http://www.co-ode.org/ontologies/ont.owl#isAlertOf> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isDateOf
+<http://www.co-ode.org/ontologies/ont.owl#isDateOf> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isDayOf
+<http://www.co-ode.org/ontologies/ont.owl#isDayOf> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isDateOf> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isHourOf
+<http://www.co-ode.org/ontologies/ont.owl#isHourOf> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isDateOf> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isMeasurementOf
+<http://www.co-ode.org/ontologies/ont.owl#isMeasurementOf> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isPlaceOf
+<http://www.co-ode.org/ontologies/ont.owl#isPlaceOf> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isPrecipitationOf
+<http://www.co-ode.org/ontologies/ont.owl#isPrecipitationOf> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isMeasurementOf> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isTemperatureOf
+<http://www.co-ode.org/ontologies/ont.owl#isTemperatureOf> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isMeasurementOf> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://mydomain.org/ontology/Alert
+onto:Alert rdf:type owl:Class .
+
+
+###  http://mydomain.org/ontology/Day
+onto:Day rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Date> .
+
+
+###  http://mydomain.org/ontology/Hour
+onto:Hour rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Date> .
+
+
+###  http://mydomain.org/ontology/MesureHoraire
+onto:MesureHoraire rdf:type owl:Class ;
+                   rdfs:subClassOf onto:MesureQuotidienne .
+
+
+###  http://mydomain.org/ontology/MesureQuotidienne
+onto:MesureQuotidienne rdf:type owl:Class .
+
+
+###  http://mydomain.org/ontology/Month
+onto:Month rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Date> .
+
+
+###  http://mydomain.org/ontology/PrecipitationHoraire
+onto:PrecipitationHoraire rdf:type owl:Class .
+
+
+###  http://mydomain.org/ontology/TemperatureMoyenneHoraire
+onto:TemperatureMoyenneHoraire rdf:type owl:Class .
+
+
+###  http://mydomain.org/ontology/Ville
+onto:Ville rdf:type owl:Class .
+
+
+###  http://mydomain.org/ontology/Year
+onto:Year rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Date> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Blizzard
+<http://www.co-ode.org/ontologies/ont.owl#Blizzard> rdf:type owl:Class ;
+                                                    rdfs:subClassOf onto:Alert .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Canicule
+<http://www.co-ode.org/ontologies/ont.owl#Canicule> rdf:type owl:Class ;
+                                                    rdfs:subClassOf onto:Alert .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Date
+<http://www.co-ode.org/ontologies/ont.owl#Date> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Inondation
+<http://www.co-ode.org/ontologies/ont.owl#Inondation> rdf:type owl:Class ;
+                                                      rdfs:subClassOf onto:Alert .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Neige
+<http://www.co-ode.org/ontologies/ont.owl#Neige> rdf:type owl:Class ;
+                                                 rdfs:subClassOf onto:Alert .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Vents_Violents
+<http://www.co-ode.org/ontologies/ont.owl#Vents_Violents> rdf:type owl:Class ;
+                                                          rdfs:subClassOf onto:Alert .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Visibilite
+<http://www.co-ode.org/ontologies/ont.owl#Visibilite> rdf:type owl:Class ;
+                                                      rdfs:subClassOf onto:Alert .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://mydomain.org/weatherkg/Alert2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/Alert2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                      onto:Alert ;
+                                                             onto:Blizzard <http://mydomain.org/weatherkg/Blizzard2Avril2021Saint-Etienne> ;
+                                                             onto:Canicule <http://mydomain.org/weatherkg/Canicule2Avril2021Saint-Etienne> ;
+                                                             onto:Inondation <http://mydomain.org/weatherkg/Inondation2Avril2021Saint-Etienne> ;
+                                                             onto:Neige <http://mydomain.org/weatherkg/Neige2Avril2021Saint-Etienne> ;
+                                                             onto:Vents_Violents <http://mydomain.org/weatherkg/Vents_Violents2Avril2021Saint-Etienne> ;
+                                                             onto:Verglas <http://mydomain.org/weatherkg/Verglas2Avril2021Saint-Etienne> ;
+                                                             onto:Visibilite <http://mydomain.org/weatherkg/Visibilite2Avril2021Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire10h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire10h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports10h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne10h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire10h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire10h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire11h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire11h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports11h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne11h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire11h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire11h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire12h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire12h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports12h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne12h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire12h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire12h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire13h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire13h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports13h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne13h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire13h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire13h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire14h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire14h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports14h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne14h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire14h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire14h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire15h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire15h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports15h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne15h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire15h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire15h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire16h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire16h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports16h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne16h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire16h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire16h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire17h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire17h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports17h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne17h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire17h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire17h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire18h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire18h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports18h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne18h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire18h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire18h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire19h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire19h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports19h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne19h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire19h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire19h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire1h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire1h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports1h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne1h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire1h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire1h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire20h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire20h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports20h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne20h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire20h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire20h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire21h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire21h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports21h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne21h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire21h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire21h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire22h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire22h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports22h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne22h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire22h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire22h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire23h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire23h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                 onto:MesureHoraire ;
+                                                                        onto:Hour <http://mydomain.org/weatherkg/Rapports23h2Avril2021> ;
+                                                                        onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne23h2Avril2021Saint-Etienne> ;
+                                                                        onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire23h2Avril2021Saint-Etienne> ;
+                                                                        onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire23h2Avril2021Saint-Etienne> ;
+                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire2h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire2h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports2h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne2h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire2h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire3h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire3h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports3h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne3h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire3h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire3h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire4h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire4h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports4h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne4h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire4h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire4h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire5h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire5h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports5h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne5h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire5h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire5h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire6h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire6h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports6h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne6h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire6h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire6h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire7h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire7h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports7h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne7h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire7h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire7h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire8h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire8h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports8h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne8h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire8h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire8h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureHoraire9h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureHoraire9h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                onto:MesureHoraire ;
+                                                                       onto:Hour <http://mydomain.org/weatherkg/Rapports9h2Avril2021> ;
+                                                                       onto:MesureQuotidienne <http://mydomain.org/weatherkg/MesureQuotidienne9h2Avril2021Saint-Etienne> ;
+                                                                       onto:PrecipitationHoraire <http://mydomain.org/weatherkg/PrecipitationHoraire9h2Avril2021Saint-Etienne> ;
+                                                                       onto:TemperatureMoyenneHoraire <http://mydomain.org/weatherkg/TemperatureMoyenneHoraire9h2Avril2021Saint-Etienne> ;
+                                                                       onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/MesureQuotidienne0h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureQuotidienne0h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                    onto:MesureQuotidienne ;
+                                                                           onto:Alert <http://mydomain.org/weatherkg/Alert0h2Avril2021Saint-Etienne> ;
+                                                                           onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                                           onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire10h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire10h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire11h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire11h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire12h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire12h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire13h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire13h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire14h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire14h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire15h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire15h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire16h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire16h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire17h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire17h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire18h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire18h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire19h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire19h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire1h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire1h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire20h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire20h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire21h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire21h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "1.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire22h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire22h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "3.2000003mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire23h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire23h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                        onto:PrecipitationHoraire ;
+                                                                               onto:valeur "1.5mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire2h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire2h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire3h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire3h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire4h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire4h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire5h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire5h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire6h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire6h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire7h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire7h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire8h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire8h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/PrecipitationHoraire9h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/PrecipitationHoraire9h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                       onto:PrecipitationHoraire ;
+                                                                              onto:valeur "0.0mm" .
+
+
+###  http://mydomain.org/weatherkg/Rapports10h2Avril2021
+<http://mydomain.org/weatherkg/Rapports10h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T10h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports11h2Avril2021
+<http://mydomain.org/weatherkg/Rapports11h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T11h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports12h2Avril2021
+<http://mydomain.org/weatherkg/Rapports12h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T12h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports13h2Avril2021
+<http://mydomain.org/weatherkg/Rapports13h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T13h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports14h2Avril2021
+<http://mydomain.org/weatherkg/Rapports14h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T14h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports15h2Avril2021
+<http://mydomain.org/weatherkg/Rapports15h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T15h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports16h2Avril2021
+<http://mydomain.org/weatherkg/Rapports16h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T16h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports17h2Avril2021
+<http://mydomain.org/weatherkg/Rapports17h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T17h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports18h2Avril2021
+<http://mydomain.org/weatherkg/Rapports18h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T18h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports19h2Avril2021
+<http://mydomain.org/weatherkg/Rapports19h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T19h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports1h2Avril2021
+<http://mydomain.org/weatherkg/Rapports1h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T1h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports2021
+<http://mydomain.org/weatherkg/Rapports2021> rdf:type owl:NamedIndividual ,
+                                                      onto:Year ;
+                                             xsd:gYear "2021" .
+
+
+###  http://mydomain.org/weatherkg/Rapports20h2Avril2021
+<http://mydomain.org/weatherkg/Rapports20h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T20h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports21h2Avril2021
+<http://mydomain.org/weatherkg/Rapports21h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T21h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports22h2Avril2021
+<http://mydomain.org/weatherkg/Rapports22h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T22h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports23h2Avril2021
+<http://mydomain.org/weatherkg/Rapports23h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                               onto:Hour ;
+                                                      onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                      xsd:datetime "2021-04-2T23h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports2Avril2021
+<http://mydomain.org/weatherkg/Rapports2Avril2021> rdf:type owl:NamedIndividual ,
+                                                            onto:Day ;
+                                                   onto:Month <http://mydomain.org/weatherkg/RapportsAvril2021> ;
+                                                   xsd:date "2021-04-2" .
+
+
+###  http://mydomain.org/weatherkg/Rapports2h2Avril2021
+<http://mydomain.org/weatherkg/Rapports2h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T2h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports3h2Avril2021
+<http://mydomain.org/weatherkg/Rapports3h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T3h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports4h2Avril2021
+<http://mydomain.org/weatherkg/Rapports4h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T4h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports5h2Avril2021
+<http://mydomain.org/weatherkg/Rapports5h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T5h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports6h2Avril2021
+<http://mydomain.org/weatherkg/Rapports6h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T6h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports7h2Avril2021
+<http://mydomain.org/weatherkg/Rapports7h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T7h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports8h2Avril2021
+<http://mydomain.org/weatherkg/Rapports8h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T8h" .
+
+
+###  http://mydomain.org/weatherkg/Rapports9h2Avril2021
+<http://mydomain.org/weatherkg/Rapports9h2Avril2021> rdf:type owl:NamedIndividual ,
+                                                              onto:Hour ;
+                                                     onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                     xsd:datetime "2021-04-2T9h" .
+
+
+###  http://mydomain.org/weatherkg/RapportsAvril2021
+<http://mydomain.org/weatherkg/RapportsAvril2021> rdf:type owl:NamedIndividual ,
+                                                           onto:Month ;
+                                                  onto:Year <http://mydomain.org/weatherkg/Rapports2021> ;
+                                                  xsd:gYearMonth "2021-04" .
+
+
+###  http://mydomain.org/weatherkg/Saint-Etienne
+<http://mydomain.org/weatherkg/Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                       onto:Ville ;
+                                              onto:Departement 42 .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire10h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire10h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "10.944445" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire11h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire11h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "12.7" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire12h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire12h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "14.77778" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire13h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire13h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "15.922221" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire14h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire14h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "16.999998" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire15h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire15h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "16.777779" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire16h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire16h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "16.655556" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire17h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire17h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "16.244446" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire18h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire18h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "16.077778" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire19h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire19h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "14.866667" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire1h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire1h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "2.3222222" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire20h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire20h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "11.8111105" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire21h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire21h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "10.133333" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire22h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire22h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "8.9777775" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire23h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire23h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                             onto:TemperatureMoyenneHoraire ;
+                                                                                    onto:valeur "8.5" ;
+                                                                                    xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire2h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "1.3777777" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire3h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire3h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "0.6111111" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire4h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire4h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "0.12222222" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire5h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire5h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "-1.6556846E-9" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire6h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire6h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "-0.6" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire7h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire7h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "-0.28888887" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire8h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire8h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "4.5444446" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  http://mydomain.org/weatherkg/TemperatureMoyenneHoraire9h2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/TemperatureMoyenneHoraire9h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                            onto:TemperatureMoyenneHoraire ;
+                                                                                   onto:valeur "8.377777" ;
+                                                                                   xsd:unit "Celsius" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
