@@ -34,13 +34,16 @@ public class GenerateKGWeather {
             float visimini = 10;
             float nivprecip = 0;
             float tempmax = 0;
+            float tempmin = 10;
 
             String url = "https://www.meteociel.fr/temps-reel/obs_villes.php?affint=1&code2=7475&jour2=20&mois2=3&annee2=2021";
             Document doc = Jsoup.connect(url).get();
             Elements elts = doc.selectXpath("/html/body/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/table/tbody/tr/td/center[2]/table/tbody/tr");
             Elements loc = doc.selectXpath("/html/body/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/table/tbody/tr/td/h1/center");
             ville = loc.get(0).text().substring(loc.get(0).text().indexOf("pour") + 5, loc.get(0).text().indexOf(" ("));
-
+            Elements eltsvent = doc.selectXpath("/html/body/table[1]/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/table/tbody/tr/td/center[2]/table[1]/tbody/tr[2]/td[3]");
+            Float rafale = Float.valueOf(eltsvent.first().text().replaceAll("\\s", "")
+                    .substring(0, eltsvent.first().text().replaceAll("\\s", "").indexOf("km/h"))).floatValue();
             jour2 = url.substring(url.indexOf("jour2") + 7, url.indexOf("jour2") + 8) == "&";
             if (!jour2) {
                 jour = url.substring(url.indexOf("jour2") + 6, url.indexOf("jour2") + 7);
@@ -152,6 +155,9 @@ public class GenerateKGWeather {
                     precipitation = 0;
                 } else {
                     temperature += temp;
+                    if (tempmin > temp){
+                        tempmin = temp;
+                    }
                     if (tempmax<temp){
                         tempmax= temp;
                     }
@@ -174,6 +180,10 @@ public class GenerateKGWeather {
                             "a onto:Alert ; " +
                             "onto:Visibilite <Visibilite" + jour + Mois[mois] + annee + ville + "> ; "+
                             "onto:Inondation <Inondation" + jour + Mois[mois] + annee + ville + "> ; "+
+                            "onto:Neige <Neige" + jour + Mois[mois] + annee + ville + "> ; "+
+                            "onto:Verglas <Verglas" + jour + Mois[mois] + annee + ville + "> ; "+
+                            "onto:Vents_Violents <Vents_Violents" + jour + Mois[mois] + annee + ville + "> ; "+
+                            "onto:Blizzard <Blizzard" + jour + Mois[mois] + annee + ville + "> ; "+
                             "onto:Canicule <Canicule" + jour + Mois[mois] + annee + ville + "> . "
             );
 
@@ -190,6 +200,34 @@ public class GenerateKGWeather {
                         "<Inondation" + jour + Mois[mois] + annee + ville + "> " +
                                 "a onto:Inondation ;" +
                                 "xsd:string \"Risque d'inondation\" . "
+                );
+            }
+
+            if (nivprecip > 10 && tempmin < 0){
+                gen.addTriples(
+                        "<Neige" + jour + Mois[mois] + annee + ville + "> " +
+                                "a onto:Neige ;" +
+                                "xsd:string \"Risque de neige\" . "
+                );
+            } else if (tempmin < 5) {
+                gen.addTriples(
+                        "<Verglas" + jour + Mois[mois] + annee + ville + "> " +
+                                "a onto:Verglas ;" +
+                                "xsd:string \"Risque de verglas\" . "
+                );
+            }
+
+            if (rafale > 100){
+                gen.addTriples(
+                        "<Vents_Violents" + jour + Mois[mois] + annee + ville + "> " +
+                                "a onto:Vents_Violents ;" +
+                                "xsd:string \"Risque de vents violents\" . "
+                );
+            } else if (rafale >50 && tempmin < 0 && nivprecip > 10) {
+                gen.addTriples(
+                        "<Blizzard" + jour + Mois[mois] + annee + ville + "> " +
+                                "a onto:Blizzard ;" +
+                                "xsd:string \"Risque de blizzard\" . "
                 );
             }
 
