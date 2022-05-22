@@ -18,7 +18,7 @@ La canicule est un phénomène météorologique caractérisé par de fortes temp
 Une inondation est une submersion temporaire, naturelle ou artificielle, d'un espace par de l'eau liquide. Nous avons décidé que cela correspond à des précipitations totales de `500mm sur une journée`.  
   
 ***Neige***  
-Nous avond décidé que l'alerte Neige correspond à une `température inférieure à 0°C` et à des `précipitations suppérieures à 10mm sur une journée`.  
+Nous avond décidé que l'alerte Neige correspond à une `température minimale inférieure à 0°C` et à des `précipitations suppérieures à 10mm sur une journée`.  
   
 ***Vent***  
 La classe vent est une classe servant à classer les phénomènes.  
@@ -62,3 +62,9 @@ Nous avons séparé les mesures à chaque heure de la journée. Ainsi nous pouvi
   
 ***MesureQuotidienne***  
 Enfin, nous pouvons moyenner nos valeurs afin d'obtenir des relevé quotidien afin de relever l'évolution des phénomènes au cours d'un mois ou d'une année.
+## **Exemples**
+Nous avons pris pour exemple la situation du `1er avril 2022` dans notre [fichier turtle](https://github.com/UgoMouze/graphe-station/blob/main/src/turtlefiles/finalstate.ttl). Il avait neigé ce jour là, cependant notre modèle ne correspondait pas aux faits qui se sont produits.  
+C'est à dire que la classe `Neige` n'est pas présente dans le fichier, ce qui est attendu puisque les précipitations totales sont inférieures à `10mm` cette journée.  
+Il est possible de voir toutes les `mesures horaires` de la journée sur le fichier précédent. En effet, on voit que les mesures horaires pointent sur les mesures quotidiennes ainsi que sur l'heure qui leur est associée.  
+Enfin, les valeurs sont regroupées pour faire une `mesure quotidienne`.  
+Nous avons également décidé de regrouper les valeurs par temps afin de faire des recherches plus facilement et de possiblement implémenter une moyenne sur une zone géographique recherchée.
