@@ -25,6 +25,6 @@ Nous avons séparé notre modèle en 4 classes comprenant plusieurs sous-classes
     * MesureHoraire
     * MesureQuotidienne
 
-
+![svg]( https://github.com/UgoMouze/graphe-station/blob/main/src/finalstate.svg "finalstate")
 
 ## Description
