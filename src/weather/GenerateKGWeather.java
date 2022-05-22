@@ -16,7 +16,7 @@ public class GenerateKGWeather {
      */
 
     public static void main(String[] args) {
-        String name = "src/turtlefiles/stationmeteo.ttl";
+        String name = "src/turtlefiles/finalstate.ttl";
         // Create a new KG generator
         GenerateKG gen = new GenerateKG();
         // Set the base URI to a custom value

@@ -132,12 +132,10 @@ xsd:unit rdf:type owl:AnnotationProperty .
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasBlizard
 <http://www.co-ode.org/ontologies/ont.owl#hasBlizard> rdf:type owl:ObjectProperty ;
-                                                      rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasSnow> ,
-                                                                         <http://www.co-ode.org/ontologies/ont.owl#hasVisibility> ,
-                                                                         <http://www.co-ode.org/ontologies/ont.owl#hasWind> ;
+                                                      rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasAlert> ;
                                                       owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isBlizardOf> ;
-                                                      rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Blizzard> ;
-                                                      rdfs:range onto:Alert .
+                                                      rdfs:domain onto:Alert ;
+                                                      rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Blizzard> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasDailyMeasure
@@ -174,16 +172,16 @@ xsd:unit rdf:type owl:AnnotationProperty .
 <http://www.co-ode.org/ontologies/ont.owl#hasFlood> rdf:type owl:ObjectProperty ;
                                                     rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasAlert> ;
                                                     owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isFloodOf> ;
-                                                    rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Inondation> ;
-                                                    rdfs:range onto:Alert .
+                                                    rdfs:domain onto:Alert ;
+                                                    rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Inondation> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasHeatWave
 <http://www.co-ode.org/ontologies/ont.owl#hasHeatWave> rdf:type owl:ObjectProperty ;
                                                        rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasAlert> ;
                                                        owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isHeatWaveOf> ;
-                                                       rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Canicule> ;
-                                                       rdfs:range onto:Alert .
+                                                       rdfs:domain onto:Alert ;
+                                                       rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Canicule> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasHour
@@ -236,8 +234,8 @@ xsd:unit rdf:type owl:AnnotationProperty .
 <http://www.co-ode.org/ontologies/ont.owl#hasSnow> rdf:type owl:ObjectProperty ;
                                                    rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasAlert> ;
                                                    owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isSnowOf> ;
-                                                   rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Neige> ;
-                                                   rdfs:range onto:Alert .
+                                                   rdfs:domain onto:Alert ;
+                                                   rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Neige> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasTemperature
@@ -252,24 +250,24 @@ xsd:unit rdf:type owl:AnnotationProperty .
 <http://www.co-ode.org/ontologies/ont.owl#hasViolentWind> rdf:type owl:ObjectProperty ;
                                                           rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasWind> ;
                                                           owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isViolentWindOf> ;
-                                                          rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Vents_Violents> ;
-                                                          rdfs:range onto:Alert .
+                                                          rdfs:domain onto:Alert ;
+                                                          rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Vents_Violents> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasVisibility
 <http://www.co-ode.org/ontologies/ont.owl#hasVisibility> rdf:type owl:ObjectProperty ;
                                                          rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasAlert> ;
                                                          owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isVisibilityOf> ;
-                                                         rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Visibilite> ;
-                                                         rdfs:range onto:Alert .
+                                                         rdfs:domain onto:Alert ;
+                                                         rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Visibilite> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasWind
 <http://www.co-ode.org/ontologies/ont.owl#hasWind> rdf:type owl:ObjectProperty ;
                                                    rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#hasAlert> ;
                                                    owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isWindOf> ;
-                                                   rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#Vent> ;
-                                                   rdfs:range onto:Alert .
+                                                   rdfs:domain onto:Alert ;
+                                                   rdfs:range <http://www.co-ode.org/ontologies/ont.owl#Vent> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#hasYear
@@ -286,9 +284,7 @@ xsd:unit rdf:type owl:AnnotationProperty .
 
 ###  http://www.co-ode.org/ontologies/ont.owl#isBlizardOf
 <http://www.co-ode.org/ontologies/ont.owl#isBlizardOf> rdf:type owl:ObjectProperty ;
-                                                       rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isSnowOf> ,
-                                                                          <http://www.co-ode.org/ontologies/ont.owl#isVisibilityOf> ,
-                                                                          <http://www.co-ode.org/ontologies/ont.owl#isWindOf> .
+                                                       rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#isAlertOf> .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#isDailyMeasureOf
@@ -388,7 +384,8 @@ onto:Hour rdf:type owl:Class ;
 
 ###  http://mydomain.org/ontology/MesureHoraire
 onto:MesureHoraire rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Mesure> .
+                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Mesure> ;
+                   rdfs:comment "Mesure horaire" .
 
 
 ###  http://mydomain.org/ontology/MesureQuotidienne
@@ -423,51 +420,74 @@ onto:Year rdf:type owl:Class ;
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Blizzard
 <http://www.co-ode.org/ontologies/ont.owl#Blizzard> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Neige> ,
-                                                                    <http://www.co-ode.org/ontologies/ont.owl#Vent> ,
-                                                                    <http://www.co-ode.org/ontologies/ont.owl#Visibilite> .
+                                                    owl:equivalentClass [ owl:intersectionOf ( onto:Alert
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.co-ode.org/ontologies/ont.owl#hasSnow> ;
+                                                                                                 owl:someValuesFrom <http://www.co-ode.org/ontologies/ont.owl#Neige>
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.co-ode.org/ontologies/ont.owl#hasVisibility> ;
+                                                                                                 owl:someValuesFrom <http://www.co-ode.org/ontologies/ont.owl#Visibilite>
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.co-ode.org/ontologies/ont.owl#hasWind> ;
+                                                                                                 owl:someValuesFrom <http://www.co-ode.org/ontologies/ont.owl#Vent>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                    rdfs:comment "Les alertes blizzard" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Canicule
 <http://www.co-ode.org/ontologies/ont.owl#Canicule> rdf:type owl:Class ;
-                                                    rdfs:subClassOf onto:Alert .
+                                                    rdfs:subClassOf onto:Alert ;
+                                                    rdfs:comment "Les alertes canicule" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Date
-<http://www.co-ode.org/ontologies/ont.owl#Date> rdf:type owl:Class .
+<http://www.co-ode.org/ontologies/ont.owl#Date> rdf:type owl:Class ;
+                                                rdfs:comment "Les dates des mesures" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Donnees
-<http://www.co-ode.org/ontologies/ont.owl#Donnees> rdf:type owl:Class .
+<http://www.co-ode.org/ontologies/ont.owl#Donnees> rdf:type owl:Class ;
+                                                   rdfs:comment "Les valeurs des mesures" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Inondation
 <http://www.co-ode.org/ontologies/ont.owl#Inondation> rdf:type owl:Class ;
-                                                      rdfs:subClassOf onto:Alert .
+                                                      rdfs:subClassOf onto:Alert ;
+                                                      rdfs:comment "Les alertes innondation" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Mesure
-<http://www.co-ode.org/ontologies/ont.owl#Mesure> rdf:type owl:Class .
+<http://www.co-ode.org/ontologies/ont.owl#Mesure> rdf:type owl:Class ;
+                                                  rdfs:comment "Les types de mesure" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Neige
 <http://www.co-ode.org/ontologies/ont.owl#Neige> rdf:type owl:Class ;
-                                                 rdfs:subClassOf onto:Alert .
+                                                 rdfs:subClassOf onto:Alert ;
+                                                 rdfs:comment "Les alertes de neige" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Vent
 <http://www.co-ode.org/ontologies/ont.owl#Vent> rdf:type owl:Class ;
-                                                rdfs:subClassOf onto:Alert .
+                                                rdfs:subClassOf onto:Alert ;
+                                                rdfs:comment "Les alertes de vent" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Vents_Violents
 <http://www.co-ode.org/ontologies/ont.owl#Vents_Violents> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Vent> .
+                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Vent> ;
+                                                          rdfs:comment "Les alertes vent violents" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#Visibilite
 <http://www.co-ode.org/ontologies/ont.owl#Visibilite> rdf:type owl:Class ;
-                                                      rdfs:subClassOf onto:Alert .
+                                                      rdfs:subClassOf onto:Alert ;
+                                                      rdfs:comment "Les alertes de mauvaise visibilité" .
 
 
 #################################################################
@@ -482,7 +502,6 @@ onto:Year rdf:type owl:Class ;
                                                              onto:Inondation <http://mydomain.org/weatherkg/Inondation2Avril2021Saint-Etienne> ;
                                                              onto:Neige <http://mydomain.org/weatherkg/Neige2Avril2021Saint-Etienne> ;
                                                              onto:Vents_Violents <http://mydomain.org/weatherkg/Vents_Violents2Avril2021Saint-Etienne> ;
-                                                             onto:Verglas <http://mydomain.org/weatherkg/Verglas2Avril2021Saint-Etienne> ;
                                                              onto:Visibilite <http://mydomain.org/weatherkg/Visibilite2Avril2021Saint-Etienne> .
 
 
@@ -716,12 +735,12 @@ onto:Year rdf:type owl:Class ;
                                                                        onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
 
 
-###  http://mydomain.org/weatherkg/MesureQuotidienne0h2Avril2021Saint-Etienne
-<http://mydomain.org/weatherkg/MesureQuotidienne0h2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
-                                                                                    onto:MesureQuotidienne ;
-                                                                           onto:Alert <http://mydomain.org/weatherkg/Alert0h2Avril2021Saint-Etienne> ;
-                                                                           onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
-                                                                           onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
+###  http://mydomain.org/weatherkg/MesureQuotidienne2Avril2021Saint-Etienne
+<http://mydomain.org/weatherkg/MesureQuotidienne2Avril2021Saint-Etienne> rdf:type owl:NamedIndividual ,
+                                                                                  onto:MesureQuotidienne ;
+                                                                         onto:Alert <http://mydomain.org/weatherkg/Alert0h2Avril2021Saint-Etienne> ;
+                                                                         onto:Day <http://mydomain.org/weatherkg/Rapports2Avril2021> ;
+                                                                         onto:Ville <http://mydomain.org/weatherkg/Saint-Etienne> .
 
 
 ###  http://mydomain.org/weatherkg/PrecipitationHoraire10h2Avril2021Saint-Etienne
@@ -1208,6 +1227,37 @@ onto:Year rdf:type owl:Class ;
                                                                                             onto:TemperatureMoyenneHoraire ;
                                                                                    onto:valeur "8.377777" ;
                                                                                    xsd:unit "Celsius" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+onto:Alert rdfs:comment "Les alertes météorologiques" .
+
+
+onto:Day rdfs:comment "Le jour correspondant aux mesures" .
+
+
+onto:Hour rdfs:comment "L'heure correspondant aux mesures" .
+
+
+onto:MesureQuotidienne rdfs:comment "Mesure correspondant à une journée" .
+
+
+onto:Month rdfs:comment "Le mois correspondant aux mesures" .
+
+
+onto:PrecipitationHoraire rdfs:comment "Les données de précipitations horaires" .
+
+
+onto:TemperatureMoyenneHoraire rdfs:comment "Les données de température horaires" .
+
+
+onto:Ville rdfs:comment "La ville correpondant aux mesures" .
+
+
+onto:Year rdfs:comment "L'année correspondant aux mesures" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
