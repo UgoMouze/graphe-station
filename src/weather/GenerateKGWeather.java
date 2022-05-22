@@ -168,7 +168,7 @@ public class GenerateKGWeather {
                 }
             }
             gen.addTriples(
-                    "<MesureQuotidienne" + hour + jour + Mois[mois] + annee + ville + ">" +
+                    "<MesureQuotidienne"  + jour + Mois[mois] + annee + ville + ">" +
                             "a onto:MesureQuotidienne ; " +
                             "onto:Day <Rapports" + jour + Mois[mois] + annee + "> ; " +
                             "onto:Ville <" + ville + "> ; " +
